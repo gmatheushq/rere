@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instituto João Gomes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Instituto João Gomes</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    </header>
+    <nav id="menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" onclick="navigateTo('services')">O que você precisa está aqui</a></li>
+            <li><a href="https://maps.app.goo.gl/25ADNt2WzuyL1weQ6" target="_blank">Localização</a></li>
+            <li><a href="tel:+551199999999">Telefone: +55 11 99999-9999</a></li>
+            <li><a href="mailto:email@example.com">Email: email@example.com</a></li>
+        </ul>
+    </nav>
+    <main id="main-content">
+        <section id="home">
+            <div class="center-content">
+                <input type="text" placeholder="Digite algo...">
+                <button onclick="navigateTo('appointment')">Agende sua sessão</button>
+            </div>
+        </section>
+        <section id="services" style="display:none;">
+            <h2>O que você precisa está aqui</h2>
+            <ul>
+                <li>Psicanálise</li>
+                <li>Thetahealing</li>
+                <li>Constelação Familiar</li>
+                <li>Barras de Access</li>
+                <li>Facelift</li>
+                <li>Reiki</li>
+            </ul>
+            <button onclick="navigateTo('appointment')">Agende sua sessão</button>
+        </section>
+        <section id="appointment" style="display:none;">
+            <h2>Agendar Sessão</h2>
+            <form id="appointment-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" required>
+                <label for="phone">Telefone:</label>
+                <input type="tel" id="phone" required>
+                <button type="submit">Confirmar</button>
+            </form>
+        </section>
+    </main>
+    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-icon">
+        <img src="whatsapp-logo.png" alt="WhatsApp">
+    </a>
+    <script src="script.js"></script>
+</body>
+</html>
